@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 @UtilityClass
 public class PropertiesReader {
-    private static final Lock lock = new ReentrantLock();
+    private final Lock lock = new ReentrantLock();
     private Properties properties;
 
     @SneakyThrows
