@@ -1,7 +1,7 @@
-package com.osipov.domain.auth.manager.web;
+package com.osipov.domain.manager.web;
 
 import com.osipov.dto.Response;
-import com.osipov.domain.auth.manager.auth.AuthManager;
+import com.osipov.domain.manager.auth.AuthManager;
 import com.osipov.domain.factory.HttpRequestFactory;
 import com.osipov.domain.method.HttpMethod;
 import lombok.AllArgsConstructor;

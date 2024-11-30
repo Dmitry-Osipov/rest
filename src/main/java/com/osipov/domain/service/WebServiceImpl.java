@@ -1,6 +1,6 @@
 package com.osipov.domain.service;
 
-import com.osipov.domain.auth.manager.web.WebManager;
+import com.osipov.domain.manager.web.WebManager;
 import com.osipov.domain.converter.Converter;
 import com.osipov.dto.QuoteResponse;
 import com.osipov.dto.Response;

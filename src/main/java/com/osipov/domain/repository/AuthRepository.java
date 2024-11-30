@@ -1,4 +1,4 @@
-package com.osipov.domain.auth.repository;
+package com.osipov.domain.repository;
 
 public interface AuthRepository {
     String getToken();

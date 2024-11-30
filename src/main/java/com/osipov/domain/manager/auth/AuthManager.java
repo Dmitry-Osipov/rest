@@ -1,4 +1,4 @@
-package com.osipov.domain.auth.manager.auth;
+package com.osipov.domain.manager.auth;
 
 import java.util.Map;
 

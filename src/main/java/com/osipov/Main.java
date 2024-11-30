@@ -1,8 +1,8 @@
 package com.osipov;
 
-import com.osipov.domain.auth.manager.auth.AuthManagerImpl;
-import com.osipov.domain.auth.manager.web.WebManagerImpl;
-import com.osipov.domain.auth.repository.SimpleAuthRepository;
+import com.osipov.domain.manager.auth.AuthManagerImpl;
+import com.osipov.domain.manager.web.WebManagerImpl;
+import com.osipov.domain.repository.SimpleAuthRepository;
 import com.osipov.domain.converter.JsonConverter;
 import com.osipov.domain.factory.HttpRequestFactoryImpl;
 import com.osipov.domain.service.WebService;

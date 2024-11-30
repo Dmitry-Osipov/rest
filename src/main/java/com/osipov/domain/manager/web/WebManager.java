@@ -1,4 +1,4 @@
-package com.osipov.domain.auth.manager.web;
+package com.osipov.domain.manager.web;
 
 import com.osipov.dto.Response;
 

@@ -1,6 +1,6 @@
-package com.osipov.domain.auth.manager.auth;
+package com.osipov.domain.manager.auth;
 
-import com.osipov.domain.auth.repository.AuthRepository;
+import com.osipov.domain.repository.AuthRepository;
 import lombok.AllArgsConstructor;
 
 import java.util.Map;
