@@ -16,34 +16,25 @@ public class WebServiceImpl implements WebService {
     
     @Override
     public List<String> getQuotes() {
-        String url = PropertiesReader.getProperties("application.properties").getProperty("kanye-rest-quotes");
-        Response response = manager.doGet(url);
-        if (response.getCode() != 200) {
-            throw new RuntimeException("Error: " + response.getCode());
-        }
-
-        return converter.toEntity(response.getMessage(), List.class);
+        return converter.toEntity(getResponse("kanye-rest-quotes").getMessage(), List.class);
     }
 
     @Override
     public String getText() {
-        String url = PropertiesReader.getProperties("application.properties").getProperty("kanye-rest-text");
-        Response response = manager.doGet(url);
-        if (response.getCode() != 200) {
-            throw new RuntimeException("Error: " + response.getCode());
-        }
-
-        return response.getMessage();
+        return getResponse("kanye-rest-text").getMessage();
     }
 
     @Override
     public String get() {
-        String url = PropertiesReader.getProperties("application.properties").getProperty("kanye-rest-main");
+        return converter.toEntity(getResponse("kanye-rest-main").getMessage(), QuoteResponse.class).getQuote();
+    }
+
+    private Response getResponse(String key) {
+        String url = PropertiesReader.getProperties("application.properties").getProperty(key);
         Response response = manager.doGet(url);
         if (response.getCode() != 200) {
             throw new RuntimeException("Error: " + response.getCode());
         }
-
-        return converter.toEntity(response.getMessage(), QuoteResponse.class).getQuote();
+        return response;
     }
 }
